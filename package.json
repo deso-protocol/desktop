@@ -1,0 +1,24 @@
+{
+  "name": "BitClout",
+  "version": "1.0.0",
+  "description": "bitclout.com electron app",
+  "main": "main.js",
+  "scripts": {
+    "start": "electron .",
+    "build": "electron-builder build --mac --win --linux"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "electron": "^12.0.4",
+    "electron-builder": "^22.10.5"
+  },
+  "homepage": "https://bitclout.com",
+  "build": {
+    "appId": "com.bitclout.electron",
+    "mac": {
+      "category": "public.app-category.social-networking"
+    }
+  }
+}
