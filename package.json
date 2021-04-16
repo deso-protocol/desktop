@@ -14,11 +14,15 @@
     "electron": "^12.0.4",
     "electron-builder": "^22.10.5"
   },
+  "repository": "https://github.com/bitclout/electron",
   "homepage": "https://bitclout.com",
   "build": {
     "appId": "com.bitclout.electron",
     "mac": {
       "category": "public.app-category.social-networking"
     }
+  },
+  "dependencies": {
+    "update-electron-app": "^2.0.1"
   }
 }
