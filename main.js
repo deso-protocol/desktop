@@ -20,14 +20,32 @@ function createWindow () {
     evt.preventDefault();
   });
 
-  win.webContents.on('new-window', function(e, url) {
-    if (url.startsWith('https://identity.bitclout.com/')) {
-      return;
-    }
-
-    e.preventDefault();
-    shell.openExternal(url);
+  win.webContents.on('will-navigate', function(event, url) {
+    handleNavigate(win, event, url);
   });
+
+  win.webContents.on('new-window', function(event, url) {
+    handleNavigate(win, event, url);
+  });
+}
+
+function handleNavigate(win, event, url) {
+  win.setTitle(url);
+
+  // Allow bitclout-approved URLs
+  if (url.startsWith('https://bitclout.com/') || url.startsWith('https://identity.bitclout.com/')) {
+    return;
+  }
+
+  event.preventDefault();
+
+  // Only allow URLs and emails
+  if(!url.startsWith('https://') && !url.startsWith('http://') && !url.startsWith('mailto:')) {
+    return;
+  }
+
+  // Open https links in external browser
+  shell.openExternal(url);
 }
 
 app.whenReady().then(() => {
