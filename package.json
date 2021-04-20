@@ -5,7 +5,7 @@
   "main": "main.js",
   "scripts": {
     "start": "electron .",
-    "build": "electron-builder build --mac --win --linux"
+    "build": "rm -rf dist && electron-builder build --mac --win --linux"
   },
   "keywords": [],
   "author": "",
@@ -19,7 +19,8 @@
   "build": {
     "appId": "com.bitclout.electron",
     "mac": {
-      "category": "public.app-category.social-networking"
+      "category": "public.app-category.social-networking",
+      "target": "dmg"
     }
   },
   "dependencies": {
