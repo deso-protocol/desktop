@@ -1,6 +1,6 @@
 {
   "name": "BitClout",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "bitclout.com electron app",
   "main": "main.js",
   "scripts": {

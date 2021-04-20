@@ -10,6 +10,7 @@ function createWindow () {
     webPreferences: {
       devTools: true,
       contextIsolation: false,
+      sandbox: true,
     }
   })
 
@@ -20,7 +21,7 @@ function createWindow () {
   });
 
   win.webContents.on('new-window', function(e, url) {
-    if (url.startsWith('https://identity.bitclout.com')) {
+    if (url.startsWith('https://identity.bitclout.com/')) {
       return;
     }
 
