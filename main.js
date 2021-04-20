@@ -9,7 +9,7 @@ function createWindow () {
     height: 900,
     webPreferences: {
       devTools: true,
-      contextIsolation: false,
+      contextIsolation: true,
       sandbox: true,
     }
   })
