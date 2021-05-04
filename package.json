@@ -20,7 +20,7 @@
     "appId": "com.bitclout.electron",
     "mac": {
       "category": "public.app-category.social-networking",
-      "target": "dmg"
+      "target": "zip"
     }
   },
   "dependencies": {
