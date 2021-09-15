@@ -1,5 +1,5 @@
 {
-  "name": "BitClout",
+  "name": "DeSo",
   "version": "1.0.3",
   "description": "bitclout.com electron app",
   "main": "main.js",
@@ -14,7 +14,7 @@
     "electron": "^12.0.4",
     "electron-builder": "^22.10.5"
   },
-  "repository": "https://github.com/bitclout/desktop",
+  "repository": "https://github.com/deso-project/desktop",
   "homepage": "https://bitclout.com",
   "build": {
     "appId": "com.bitclout.electron",
